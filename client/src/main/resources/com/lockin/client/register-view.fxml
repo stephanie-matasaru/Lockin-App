@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="450.0" spacing="20.0"
+      style="-fx-background-color: #0b162a;"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.lockin.client.controllers.RegisterController">
+
+    <padding>
+        <Insets bottom="40" left="40" right="40" top="40" />
+    </padding>
+
+    <Label text="JOIN LOCK-IN"
+           style="-fx-font-size: 32px; -fx-font-weight: 900; -fx-text-fill: #00e5ff;">
+        <effect>
+            <DropShadow radius="15.0" spread="0.4">
+                <color>
+                    <Color red="0.0" green="0.898" blue="1.0" />
+                </color>
+            </DropShadow>
+        </effect>
+    </Label>
+
+    <Label text="Create your secure account" style="-fx-text-fill: #aaaaaa; -fx-font-size: 14px;" />
+
+    <VBox spacing="15.0" alignment="CENTER" maxWidth="350.0"
+          style="-fx-background-color: rgba(0, 229, 255, 0.05); -fx-border-color: #00e5ff; -fx-border-radius: 10; -fx-background-radius: 10; -fx-padding: 30;">
+
+        <TextField fx:id="usernameField" promptText="Username"
+                   style="-fx-background-color: #0b162a; -fx-text-fill: white; -fx-prompt-text-fill: gray; -fx-border-color: #00e5ff; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+
+        <PasswordField fx:id="passwordField" promptText="Password"
+                       style="-fx-background-color: #0b162a; -fx-text-fill: white; -fx-prompt-text-fill: gray; -fx-border-color: #00e5ff; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+
+        <TextField fx:id="nameField" promptText="Full Name"
+                   style="-fx-background-color: #0b162a; -fx-text-fill: white; -fx-prompt-text-fill: gray; -fx-border-color: #00e5ff; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+
+        <TextField fx:id="phoneField" promptText="Phone Number"
+                   style="-fx-background-color: #0b162a; -fx-text-fill: white; -fx-prompt-text-fill: gray; -fx-border-color: #00e5ff; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+
+        <TextField fx:id="emailField" promptText="Email Address"
+                   style="-fx-background-color: #0b162a; -fx-text-fill: white; -fx-prompt-text-fill: gray; -fx-border-color: #00e5ff; -fx-border-radius: 5; -fx-background-radius: 5;"/>
+
+        <Label fx:id="statusLabel" text="" style="-fx-text-fill: #ff4444; -fx-font-weight: bold;"/>
+
+        <Button text="CREATE ACCOUNT" onAction="#onRegisterClick" maxWidth="Infinity"
+                style="-fx-background-color: #00e5ff; -fx-text-fill: #0b162a; -fx-font-weight: bold; -fx-font-size: 14px; -fx-background-radius: 5; -fx-cursor: hand;">
+            <effect>
+                <DropShadow color="#00e5ff" radius="10" spread="0.2"/>
+            </effect>
+        </Button>
+    </VBox>
+
+    <Button text="Back to Login" onAction="#onBackClick"
+            style="-fx-background-color: transparent; -fx-text-fill: #00e5ff; -fx-underline: true; -fx-cursor: hand;"/>
+
+</VBox>
